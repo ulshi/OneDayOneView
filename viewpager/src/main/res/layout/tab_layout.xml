@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.TabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tablayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:tabIndicatorColor="#00ccff"
+    app:tabIndicatorHeight="2dp"
+    app:tabContentStart="0dp"
+    android:background="@color/tabBg"
+    app:tabMode="fixed"
+    app:tabGravity="fill"
+    app:tabTextAppearance="@style/TablayoutTextAppearance"
+    app:tabTextColor="#333333"
+    app:tabSelectedTextColor="#ff6600"
+    >
+
+    <!--tablayout 代码添加item 的方式-->
+    <!--TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);-->
+    <!--tabLayout.addTab(tabLayout.newTab().setText("Tab1"));-->
+    <!--tabLayout.addTab(tabLayout.newTab().setText("Tab2"));-->
+    <!--tabLayout.addTab(tabLayout.newTab().setText("Tab3"));-->
+    <!--tabLayout.addTab(tabLayout.newTab().setText("Tab4"));-->
+
+    <!--<android.support.design.widget.TabItem-->
+        <!--android:text="首页"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<android.support.design.widget.TabItem-->
+        <!--android:text="列表"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<android.support.design.widget.TabItem-->
+        <!--android:text="发现"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<android.support.design.widget.TabItem-->
+        <!--android:text="更多"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+</android.support.design.widget.TabLayout>

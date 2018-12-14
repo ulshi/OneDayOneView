@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.cupster.lib.views"
+        applicationId "com.cupster.lib.views.viewpager"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -26,9 +26,15 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
-    implementation files('libs/nineoldandroids-2.4.0.jar')
+    //fragment切换动画
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
+    //
+
 }
