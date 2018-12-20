@@ -45,6 +45,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="可编辑输入对话框" />
+        <Button
+            android:id="@+id/diy_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义对话框" />
 
     </LinearLayout>
 

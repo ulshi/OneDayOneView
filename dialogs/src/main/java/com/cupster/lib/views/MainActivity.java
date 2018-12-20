@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
         btn = findViewById(R.id.editext_btn);
         btn.setOnClickListener(this);
+        btn = findViewById(R.id.diy_dialog);
+        btn.setOnClickListener(this);
     }
 
     @Override
@@ -52,8 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.editext_btn:
                 dialogEditText();   //可编辑
                 break;
-//            case :
-//                break;
+            case R.id.diy_dialog:
+                dialogDIY();
+                break;
             default:
                 break;
         }
@@ -61,6 +64,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void tShow(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+
+    private void dialogDIY(){
+        MsgAlertDialog dialog = new MsgAlertDialog(this);
+        dialog.create();
+        dialog.setTitle("标题");
+        dialog.setMsg("提示信息");
+
+        dialog.show();
+        dialog.setConfirmClickListener("确定",new MsgAlertDialog.onConfirmOnClickListener(){
+            @Override
+            public void onConfirmClick() {
+                tShow("click 确定");
+            }
+        });
+        dialog.setCancelClickListener("取消", new MsgAlertDialog.onCancelOnClickListener() {
+            @Override
+            public void onCancelClick() {
+               tShow("click 取消");
+            }
+        });
+
     }
 
 
