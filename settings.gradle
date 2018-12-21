@@ -1,1 +1,1 @@
-include ':app', ':ripple', ':viewpager'
+include ':app', ':ripple', ':dialogs', ':viewpager'
