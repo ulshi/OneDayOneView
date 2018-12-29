@@ -2,6 +2,7 @@ package com.cupster.lib.views;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
         btn = findViewById(R.id.diy_dialog);
         btn.setOnClickListener(this);
+        btn = findViewById(R.id.ios_dialog);
+        btn.setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.diy_dialog:
                 dialogDIY();
                 break;
+            case R.id.ios_dialog:
+                iosDialog();
+                break;
             default:
                 break;
         }
@@ -64,6 +70,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void tShow(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+    private void iosDialog(){
+        IosDialog dialog = new IosDialog(this);
+        dialog.setPositiveOnClickListener(new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                tShow("确定");
+            }
+        });
+        dialog.setNegativeOnClickListener(new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                tShow("取消");
+            }
+        });
+        dialog.show();
+        dialog.setBtnText("忽略", "查看");
+        dialog.setMessage("消息体-消息体-消息体-消息体-消息体-消息体-消息体-消息体-消息体-");
     }
 
 
