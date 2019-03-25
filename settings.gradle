@@ -1,1 +1,1 @@
-include ':app', ':ripple', ':dialogs'
+include ':app', ':ripple', ':dialogs', ':swipeback', ':drawerlayoutdemo'
