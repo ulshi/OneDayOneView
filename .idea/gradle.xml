@@ -12,7 +12,11 @@
             <option value="$PROJECT_DIR$/dialogs" />
             <option value="$PROJECT_DIR$/drawerlayoutdemo" />
             <option value="$PROJECT_DIR$/ripple" />
+<<<<<<< HEAD
             <option value="$PROJECT_DIR$/swipeback" />
+=======
+            <option value="$PROJECT_DIR$/viewpager" />
+>>>>>>> b5e904f02e5dda69e8e3e6f3541876f7856c0b5f
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
