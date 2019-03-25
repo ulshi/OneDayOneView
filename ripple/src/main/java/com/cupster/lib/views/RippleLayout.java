@@ -24,10 +24,10 @@ public class RippleLayout extends RelativeLayout {
     /**
      * static final fields
      */
-    private static final int DEFAULT_RIPPLE_COUNT = 4;
-    private static final int DEFAULT_DURATION_TIME = 3000;
-    private static final float DEFAULT_SCALE = 4.0f;
-    private static final int DEFAULT_RIPPLE_COLOR = Color.rgb(0x33, 0xff, 0x00);
+    private static final int DEFAULT_RIPPLE_COUNT = 4;//波纹数
+    private static final int DEFAULT_DURATION_TIME = 3000;//单波纹动画持续时间
+    private static final float DEFAULT_SCALE = 4.0f;//波纹传播几倍半径，默认4倍
+    private static final int DEFAULT_RIPPLE_COLOR = Color.rgb(0x00, 0xff, 0x00);
     private static final int DEFAULT_STROKE_WIDTH = 5;
     private static final int DEFAULT_RADIUS = 80;
 

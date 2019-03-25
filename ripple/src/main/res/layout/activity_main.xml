@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <com.cupster.lib.views.RippleLayout xmlns:ripple="http://schemas.android.com/apk/org.simple.ripplelayout"
+    <com.cupster.lib.views.RippleLayout xmlns:ripple ="http://schemas.android.com/apk/res-auto"
         android:id="@+id/ripple_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,10 +15,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        ripple:color="#00cc00"
+        ripple:color="#ff0000"
         ripple:duration="3000"
-        ripple:radius="32dp"
-        ripple:rippleNums="1"
+        ripple:radius="35dp"
+        ripple:rippleNums="3"
         ripple:scale="4">
 
         <ImageView
