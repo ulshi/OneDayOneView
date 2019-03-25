@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<include-->
+        <!--layout="@layout/tab_layout"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"></include>-->
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager_bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintBottom_toTopOf="@id/tablayout_main"-->
+        <!--&gt;</android.support.v4.view.ViewPager>-->
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingBottom="5dp"
+        app:tabIndicatorColor="#00ccff"
+        app:tabIndicatorHeight="2dp"
+        app:tabContentStart="0dp"
+        android:background="@color/tabBg"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@style/TablayoutTextAppearance"
+        app:tabTextColor="#333333"
+        app:tabSelectedTextColor="#ff6600">
+        <!--1.代码添加item 的方式-->
+        <!--TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);-->
+        <!--tabLayout.addTab(tabLayout.newTab().setText("Tab1"));-->
+        <!--tabLayout.addTab(tabLayout.newTab().setText("Tab2"));-->
+        <!--tabLayout.addTab(tabLayout.newTab().setText("Tab3"));-->
+        <!--tabLayout.addTab(tabLayout.newTab().setText("Tab4"));-->
+
+        <!--2.xml添加item 的方式-->
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="首页"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="列表"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="发现"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.design.widget.TabItem-->
+        <!--android:text="更多"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    </android.support.design.widget.TabLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tablayout_main">
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
