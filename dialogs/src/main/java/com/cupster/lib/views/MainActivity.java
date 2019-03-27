@@ -94,21 +94,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void dialogDIY(){
-        MsgAlertDialog dialog = new MsgAlertDialog(this);
-        dialog.create();
+        final MsgAlertDialog dialog = new MsgAlertDialog(this);
+        dialog.show();
         dialog.setTitle("标题");
         dialog.setMsg("提示信息");
-
-        dialog.show();
         dialog.setConfirmClickListener("确定",new MsgAlertDialog.onConfirmOnClickListener(){
             @Override
             public void onConfirmClick() {
+                dialog.dismiss();
                 tShow("click 确定");
             }
         });
         dialog.setCancelClickListener("取消", new MsgAlertDialog.onCancelOnClickListener() {
             @Override
             public void onCancelClick() {
+                dialog.dismiss();
                tShow("click 取消");
             }
         });
