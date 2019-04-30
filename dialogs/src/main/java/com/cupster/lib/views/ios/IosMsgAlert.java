@@ -1,10 +1,11 @@
-package com.cupster.lib.views;
+package com.cupster.lib.views.ios;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.cupster.lib.views.R;
 
-public class IosDialog extends AlertDialog implements OnClickListener {
+
+public class IosMsgAlert extends AlertDialog implements OnClickListener {
 
     private LayoutInflater mInflater;
     private View mView;
@@ -30,31 +33,38 @@ public class IosDialog extends AlertDialog implements OnClickListener {
     private TextView mTvCancel;
     private View btn_divider;
 
-    public IosDialog(Context context) {
-        this(context,R.style.ios_dialog);
-        // TODO Auto-generated constructor stub
+    public IosMsgAlert(Context context) {
+        this(context, R.style.ios_dialog);
         mContext = context;
         mInflater = LayoutInflater.from(context);
     }
 
-    public IosDialog(Context context, int themeResId) {
+    public IosMsgAlert(Context context, int themeResId) {
         super(context, themeResId);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         mView = mInflater.inflate(R.layout.dialog_ios, null);
         setContentView(mView);
         mTvMessage = (TextView) mView.findViewById(R.id.tv_message);
         mTvTitle = (TextView) mView.findViewById(R.id.tv_title);
         mRelativeTitle = (RelativeLayout) mView.findViewById(R.id.relative_title);
+        mRelativeTitle.setVisibility(View.GONE);
         btn_divider = mView.findViewById(R.id.divider);
         mTvSure = (TextView) mView.findViewById(R.id.tv_sure);
         mTvSure.setOnClickListener(this);
         mTvCancel = (TextView) mView.findViewById(R.id.tv_cancel);
         mTvCancel.setOnClickListener(this);
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        Log.e( "onDetachedFromWindow: ", "dismiss");
+        mContext = null;
+        mInflater = null;
     }
 
     public void setWidth(float widthPortrait, float widthLandScape){
@@ -75,31 +85,36 @@ public class IosDialog extends AlertDialog implements OnClickListener {
 
     @Override
     public void setTitle(CharSequence title) {
-        // TODO Auto-generated method stub
-        super.setTitle(title);
         mRelativeTitle.setVisibility(View.VISIBLE);
-        mTvTitle.setText(title + "");
+        mTvTitle.setText(title);
     }
 
     @Override
     public void setMessage(CharSequence message) {
-        // TODO Auto-generated method stub
         super.setMessage(message);
-        mTvMessage.setText(message + "");
+        StringBuilder sb = new StringBuilder();
+        sb.append("      ");
+        sb.append(message);
+        mTvMessage.setText(sb.toString());
     }
 
+    public void sestMessageColor(int color) {
+        mTvMessage.setTextColor(color);
+    }
     public void sestMessageColor(SpannableStringBuilder builder) {
         mTvMessage.setText(builder);
     }
+    public void sestTitleColor(SpannableStringBuilder builder) {
+        mTvTitle.setText(builder);
+    }
 
     public void setBtnText(String tvCancel, String tvSure) {
-        mTvSure.setText(tvSure + "");
-        mTvCancel.setText(tvCancel + "");
+        mTvSure.setText(tvSure);
+        mTvCancel.setText(tvCancel);
     }
 
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.tv_sure:
                 if (mPositiveListener != null) {
@@ -127,8 +142,21 @@ public class IosDialog extends AlertDialog implements OnClickListener {
         mTvMessage.setGravity(gravity);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(dip2px(mContext, 20), dip2px(mContext, 10), dip2px(mContext, 10), dip2px(mContext, 10));
+        params.setMargins(dip2px(mContext, 30), dip2px(mContext, 30), dip2px(mContext, 20), dip2px(mContext, 10));
         mTvMessage.setLayoutParams(params);
+    }
+
+    /**
+     * 设置Title显示模式
+     *
+     * @param gravity
+     */
+    public void setTitleGravity(int gravity) {
+        mTvTitle.setGravity(gravity);
+//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+//                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        params.setMargins(dip2px(mContext, 30), dip2px(mContext, 30), dip2px(mContext, 30), dip2px(mContext, 10));
+//        mTvTitle.setLayoutParams(params);
     }
 
     public static int dip2px(Context context, float dpValue)
@@ -140,10 +168,13 @@ public class IosDialog extends AlertDialog implements OnClickListener {
     /**
      * 设置message字体颜色
      *
-     * @param color
+     * @param color 颜色值，非资源id
      */
     public void setMessageColor(int color) {
         mTvMessage.setTextColor(color);
+    }
+    public void setTitleColor(int color) {
+        mTvTitle.setTextColor(color);
     }
 
     /**
