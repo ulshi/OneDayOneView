@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-include ':app', ':ripple', ':dialogs', ':swipeback', ':drawerlayoutdemo'
-=======
-include ':app', ':ripple', ':dialogs', ':viewpager'
->>>>>>> b5e904f02e5dda69e8e3e6f3541876f7856c0b5f
+include ':app', ':ripple', ':dialogs', ':swipeback', ':drawerlayoutdemo','viewpager','welcome'
+
+

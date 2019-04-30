@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AppFrameUI</string>
+
+    <string name="toast_keyback_exit">再按一次退出程序</string>
+
+    <!--Welcome page-->
+    <string name="btn_name_skip">跳过</string>
+    <string name="btn_name_into">进入</string>
+    <string name="btn_name_detail">详情</string>
+
+    <!--MainActivity-->
+    <string name="navi_i1">menu 1</string>
+    <string name="navi_i2">menu 2</string>
+    <string name="navi_i3">menu 3</string>
+    <string name="navi_i4">menu 4</string>
+    <string name="navi_email">email：cupster@163.com</string>
+    <string name="navi_bottom_word">dev. by Cupster</string>
+</resources>
