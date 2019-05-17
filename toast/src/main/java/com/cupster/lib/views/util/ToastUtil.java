@@ -1,6 +1,7 @@
 package com.cupster.lib.views.util;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,18 +70,27 @@ public class ToastUtil {
         TextView text = (TextView) toastRoot.findViewById(R.id.txt_toast);
         switch (colorMode){
             case MSG_NORMAL:
-
-                break;
+                Toast.makeText(MyApplication.getContext(),message,Toast.LENGTH_LONG).show();
+                return;
             case MSG_INFO:
-                text.setCompoundDrawablesWithIntrinsicBounds(MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_info),null,null,null);
+                Drawable drawable = MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_info);
+                drawable.setBounds(0,0,55,55);
+                text.setCompoundDrawablePadding(15);
+                text.setCompoundDrawables(drawable,null,null,null);
                 toastRoot.setBackgroundResource(R.drawable.shape_toast_bg_orange);
                 break;
             case MSG_SUCESS:
-                text.setCompoundDrawablesWithIntrinsicBounds(MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_ok),null,null,null);
+                Drawable drawable1 = MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_ok);
+                drawable1.setBounds(0,0,50,50);
+                text.setCompoundDrawablePadding(15);
+                text.setCompoundDrawables(drawable1,null,null,null);
                 toastRoot.setBackgroundResource(R.drawable.shape_toast_bg_green);
                 break;
             case MSG_ERROR:
-                text.setCompoundDrawablesWithIntrinsicBounds(MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_err),null,null,null);
+                Drawable drawable2 = MyApplication.getContext().getResources().getDrawable(R.mipmap.icon_err);
+                drawable2.setBounds(0,0,50,50);
+                text.setCompoundDrawablePadding(15);
+                text.setCompoundDrawables(drawable2,null,null,null);
                 toastRoot.setBackgroundResource(R.drawable.shape_toast_bg_red);
                 break;
             default:

@@ -6,13 +6,18 @@
     android:layout_height="wrap_content"
     android:minHeight="18dp"
     android:background="@drawable/shape_toast_bg"
-    android:padding="10dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:orientation="vertical">
     <TextView
         android:id="@+id/txt_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="@color/white"
         android:gravity="center_vertical"
         />
