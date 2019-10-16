@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextViewActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/animation_drawable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="animation tv"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/rotating_loading"
+                android:drawableRight="@drawable/animated_wifi"
+              />
+            <TextView
+                android:id="@+id/shadow_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shadow 阴影"
+                android:textSize="50sp"
+                android:textStyle="bold"
+
+                android:shadowColor="@color/shadow"
+                android:shadowDx="12"
+                android:shadowDy="12"
+                android:shadowRadius="8"
+                />
+            <TextView
+                android:id="@+id/shadow_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blocky 浮块"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple"
+
+                android:shadowColor="@color/green"
+                android:shadowDx="8"
+                android:shadowDy="-8"
+                android:shadowRadius="1"
+                />
+            <TextView
+                android:id="@+id/shadow_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Glow 背发光"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@android:color/black"
+
+                android:shadowColor="@color/yellow"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="24"
+                />
+
+
+            <TextView
+                android:id="@+id/font_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="font 字体 Ruthie.ttf"
+                android:textSize="20sp"
+                 />
+            <TextView
+                android:id="@+id/font_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="font 字体 Nutso2.otf"
+                android:textSize="20sp"
+                 />
+            <TextView
+                android:id="@+id/font_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="font 字体 icomone.ttf"
+                android:textSize="20sp"
+                 />
+
+
+            <TextView
+                android:id="@+id/gradient_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gradient 渐变tv"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                 />
+            <TextView
+                android:id="@+id/gradient_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gradient 渐变tv"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                 />
+            <TextView
+                android:id="@+id/gradient_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gradient 渐变tv"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                 />
+            <TextView
+                android:id="@+id/icon_filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片填充字体"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                 />
+            <TextView
+                android:id="@+id/html_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用html格式"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                 />
+
+
+
+            <TextView
+                android:id="@+id/span_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="span str"
+                android:textSize="25sp"
+
+                android:padding="16dp"
+                />
+
+
+            <TextView
+                android:id="@+id/rainbow_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:text="Rainbow highlight! The text in the span is drawn with a LinearGradient as the Shader,
+    creating a rainbow where the gradient width scales with the text size. In this demo, the
+    highlighted term is also given a bold style."
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/rainbow_tv_animate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:text="To make an animated rainbow span, translate the Shader with a Matrix, and change the translation
+    value with an ObjectAnimator."
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/click_span"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:text="With ClickableSpan, you can make a link to go to settings in the middle of some text."
+                android:textSize="16sp"
+
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColorLink="@color/go_to_settings"
+                android:textColorHighlight="@color/light_green"
+                />
+            <com.cupster.textview.LinedEditText
+                android:id="@+id/underline_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="This is an EditText with baselines across its full width, taking paddings into account.
+    Try changing the text and see it adjust the number of lines."
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:background="@color/paper_background" />
+
+            <TextView
+                android:id="@+id/text_emoji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="16dp"
+                android:text="@string/emoji_text"
+                android:textIsSelectable="true"
+                android:textSize="24sp"/>
+            <Button
+                android:id="@+id/render_emoji_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="render_emoji"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
