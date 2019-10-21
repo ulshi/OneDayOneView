@@ -201,7 +201,7 @@ public class TextViewActivity extends AppCompatActivity {
         TextView font_tv2 = findViewById(R.id.font_tv2);
         TextView font_tv3 = findViewById(R.id.font_tv3);
         try {
-            Typeface typeface_Ruthie = Typeface.createFromAsset(getAssets(), "Ruthie.ttf");//钢笔签字风格
+            Typeface typeface_Ruthie = Typeface.createFromAsset(getAssets(), "fonts/Ruthie.ttf");//钢笔签字风格
             font_tv1.setTypeface(typeface_Ruthie);
             Typeface typeface_icomoon = Typeface.createFromAsset(getAssets(), "icomoon.ttf");
             font_tv2.setTypeface(typeface_icomoon);

@@ -22,6 +22,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="animation tv"
+                android:textSize="24sp"
+                android:fontFamily="@font/ruthie"
+                android:includeFontPadding="false"
                 android:drawablePadding="8dp"
                 android:gravity="center"
                 android:drawableLeft="@drawable/rotating_loading"
@@ -76,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="font 字体 Ruthie.ttf"
+               android:includeFontPadding="false"
                 android:textSize="20sp"
                 />
             <TextView
@@ -83,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="font 字体 Nutso2.otf"
+                android:fontFamily=""
                 android:textSize="20sp"
                 />
             <TextView

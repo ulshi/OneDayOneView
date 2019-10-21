@@ -8,14 +8,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/autoanimlayout" />
             <option value="$PROJECT_DIR$/dialogs" />
             <option value="$PROJECT_DIR$/drawerlayoutdemo" />
             <option value="$PROJECT_DIR$/fullscreencontrol" />
             <option value="$PROJECT_DIR$/ripple" />
             <option value="$PROJECT_DIR$/swipeback" />
+            <option value="$PROJECT_DIR$/textswitcher" />
             <option value="$PROJECT_DIR$/textview" />
             <option value="$PROJECT_DIR$/toast" />
+            <option value="$PROJECT_DIR$/view_image_switcher" />
             <option value="$PROJECT_DIR$/viewpager" />
             <option value="$PROJECT_DIR$/welcome" />
           </set>
