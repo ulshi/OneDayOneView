@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <!--
+        app:itemBackground="@color/colorAccent"      设置每一个item的背景颜色
+        app:itemTextColor=""    设置item的背景颜色
+
+        NavigationView的item之间添加上一条分隔线：只需要在menu中将相应的item放到一个group中，并给该group取一个id即可
+        -->
+        <item
+            android:id="@+id/nav_menu_call"
+            android:icon="@mipmap/ic_launcher"
+            app:itemBackground="@android:color/holo_blue_light"
+            android:title="Call" />
+        <item
+            android:id="@+id/nav_menu_friends"
+            android:icon="@mipmap/ic_launcher"
+            app:itemTextColor="@android:color/holo_red_light"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_menu_loaction"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Loaction" />
+        <item
+            android:id="@+id/nav_menu_mail"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Mail" />
+        <item
+            android:id="@+id/nav_menu_cloud"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Cloud" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/navi_menu_gp2"
+        >
+        <item
+            android:id="@+id/nav_menu_call2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Call" />
+        <item
+            android:id="@+id/nav_menu_friends2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_menu_loaction2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Loaction" />
+        <item
+            android:id="@+id/nav_menu_mail2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Mail" />
+        <item
+            android:id="@+id/nav_menu_cloud2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Cloud" />
+    </group>
+    <item android:title="Sub items">
+        <menu>
+            <item
+                android:id="@+id/nav_sub_items_1"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Sub items 1" />
+            <item
+                android:id="@+id/nav_sub_items_2"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Sub items 2" />
+        </menu>
+    </item>
+</menu>
