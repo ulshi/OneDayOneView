@@ -23,14 +23,9 @@ public class ViewImageSwitcherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_image_switcher);
 
-
         viewSwitch();
-
 //        dynViewSwitch();
-
         imageSwitch();
-
-
     }
 
     private void viewSwitch() {
