@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MaterialLayout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_detail_behavior">com.cupster.materiallayout.behavior.Map4DetailBehavior</string>
+
+
+    <string name="behavior_hide_bottom_depend_way">com.cupster.materiallayout.behavior.HideFooterDependWayBehavior</string>
+    <string name="behavior_hide_bottom_scroll_way">com.cupster.materiallayout.behavior.HideFooterScrollWayBehavior</string>
+
+</resources>

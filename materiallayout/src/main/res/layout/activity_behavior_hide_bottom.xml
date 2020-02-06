@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/coordinate"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/appbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/icon_wx_search"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/search"
+                android:text="搜索话题、问题或人"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+
+        android:id="@+id/recycler"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--使用RadioGroup来实现tab的切换-->
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/behavior_hide_bottom_scroll_way"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/icon_wx_msg"
+
+            android:text="Home"/>
+
+        <RadioButton
+            android:id="@+id/rb_course"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/icon_wx_contact"
+            android:text="course"/>
+
+        <RadioButton
+            android:id="@+id/rb_direct_seeding"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/icon_wx_find"
+            android:text="direct"/>
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/icon_wx_setting"
+            android:text="me"/>
+
+    </RadioGroup>
+
+
+</android.support.design.widget.CoordinatorLayout>
