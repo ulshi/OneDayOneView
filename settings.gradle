@@ -1,3 +1,3 @@
-include ':app', ':ripple', ':dialogs', ':swipeback', ':drawerlayoutdemo', ':toast', ':fullscreencontrol', ':textview', ':animation', ':autoanimlayout', ':textswitcher', ':view_image_switcher', ':dialog_fragment', ':snackbar', ':navigationview', ':materiallayout', ':edittext','viewpager','welcome'
+include ':app',':edittext',':materiallayout', ':ripple', ':dialogs', ':swipeback', ':drawerlayoutdemo', ':toast', ':fullscreencontrol', ':textview', ':animation', ':autoanimlayout', ':textswitcher', ':view_image_switcher', ':dialog_fragment', ':snackbar', ':navigationview', ':materiallayout', ':edittext', ':webview','viewpager','welcome'
 
 
